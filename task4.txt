@@ -1,0 +1,35 @@
+INP
+STA num1
+INP
+STA num2
+
+mult LDA num2
+SUB one
+STA num2
+BRP addder
+BRA next
+
+addder LDA result
+ADD num1
+STA result
+BRA mult
+
+next LDA result
+STA num1
+INP num2
+STA num2
+SUB one
+BRP cont
+output LDA result
+OUT
+HLT
+
+cont LDA zero
+STA result
+BRA mult
+
+num1 DAT
+num2 DAT
+result DAT 0
+one DAT 1
+zero DAT 0

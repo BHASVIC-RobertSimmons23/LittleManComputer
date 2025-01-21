@@ -1,0 +1,10 @@
+INP
+STA num1
+INP
+STA num2
+LDA num1
+SUB num2
+OUT
+
+num1 DAT
+num2 DAT

@@ -1,0 +1,20 @@
+INP
+STA num1
+INP
+STA num2
+SUB num1
+BRP positive
+positive SUB one
+BRP notequal
+LDA one
+OUT
+HLT
+
+notequal LDA zero
+OUT
+HLT
+
+num1 DAT
+num2 DAT
+one DAT 1
+zero DAT 0

@@ -1,0 +1,36 @@
+INP
+STA num
+BRP pos
+LDA zero
+SUB num
+STA num
+
+pos STA count
+SUB thirtytwo
+BRP toobig
+
+mult LDA count
+SUB one
+STA count
+BRP adder
+BRA output
+
+adder LDA result
+ADD num
+STA result
+BRA mult
+
+output LDA result
+OUT
+HLT
+
+toobig LDA zero
+OUT
+HLT
+
+num DAT
+count DAT
+result DAT 0
+one DAT 1
+zero DAT 0
+thirtytwo DAT 32

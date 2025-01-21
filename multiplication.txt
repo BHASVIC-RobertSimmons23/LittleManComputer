@@ -1,0 +1,20 @@
+        INP 
+        STA num1 
+        INP 
+        STA num2 
+loop    LDA num1 
+        SUB one 
+        STA num1 
+        BRP addder 
+        BRA output 
+addder  LDA result 
+        ADD num2 
+        STA result 
+        BRA loop 
+output  LDA result 
+        OUT 
+        HLT 
+num1    DAT 
+num2    DAT 
+one     DAT 1 
+result  DAT 0

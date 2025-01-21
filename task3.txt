@@ -1,0 +1,13 @@
+INP
+STA target
+loop LDA count
+OUT
+ADD two
+STA count
+SUB target
+BRP exit
+BRA loop
+exit HLT
+two DAT 2
+count DAT 0
+target DAT

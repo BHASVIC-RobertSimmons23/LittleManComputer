@@ -1,0 +1,11 @@
+loop LDA count
+output OUT
+SUB one
+STA count
+SUB one
+BRP loop
+exit HLT
+ten DAT 10
+zero DAT 0
+count DAT 10
+one DAT 1

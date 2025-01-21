@@ -1,0 +1,36 @@
+        INP 
+        STA base 
+        STA result 
+        INP 
+        SUB one 
+        STA exp 
+mult    LDA exp 
+        SUB one 
+        BRP keepL 
+        BRA output 
+keepL   STA exp 
+        LDA base 
+        STA count 
+        LDA zero 
+        STA new 
+test    LDA count 
+        SUB one 
+        BRP keep 
+        LDA new 
+        STA result 
+        BRA mult 
+keep    STA count 
+        LDA new 
+        ADD result 
+        STA new 
+        BRA test 
+output  LDA result 
+        OUT 
+        HLT 
+base    DAT 
+exp     DAT 
+result  DAT 
+new     DAT 
+one     DAT 1 
+zero    DAT 0 
+count   DAT 
