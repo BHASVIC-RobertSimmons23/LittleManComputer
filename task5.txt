@@ -3,14 +3,12 @@ STA num1
 INP
 STA num2
 SUB num1
-BRP positive
-positive SUB one
-BRP notequal
-LDA one
+BRZ equal
+LDA zero
 OUT
 HLT
 
-notequal LDA zero
+equal LDA one
 OUT
 HLT
 

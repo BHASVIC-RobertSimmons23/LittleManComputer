@@ -1,0 +1,15 @@
+INP
+STA dividend
+INP
+STA divisor
+
+loop LDA
+
+sub LDA dividend
+SUB divisor
+BRP loop
+
+
+dividend DAT
+divisor DAT
+quotient DAT
